@@ -1,5 +1,5 @@
 
-# 0x01-variables_if_else_while_
+# 0x01-variables_if_else_while
 
 
 
