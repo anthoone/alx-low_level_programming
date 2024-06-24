@@ -10,29 +10,23 @@
 
 int main(void)
 {
-	int n1, n2, n3, n4;
+	int num1, num2;
 
-	for (n1 = 48; n1 <= 57; n1++)
+	for (num1 = 0; num1 < 100; num1++)
 	{
-		for (n2 = 48; n2 <= 56; n2++)
+		for (num2 = 0; num2 < 100; num2++)
 		{
-			for (n3 = 48; n3 <= 57; n3++)
+			if (num1 < num2)
 			{
-				for (n4 = 48; n4 <= 57; n4++)
+				putchar((num1 / 10) + 48);
+				putchar((num1 % 10) + 48);
+				putchar(' ');
+				putchar((num2 / 10) + 48);
+				putchar((num2 % 10) + 48);
+				if (num1 != 98 || num2 != 99)
 				{
-					if ((n1 <= n3) && (n2 <= n4) && !(n1 == n3 && n2 == n4))
-					{
-						putchar(n1);
-						putchar(n2);
-						putchar(' ');
-						putchar(n3);
-						putchar(n4);
-						if (!(n1 == 57 && n2 == 56 && n3 == 57 && n4 == 57))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
