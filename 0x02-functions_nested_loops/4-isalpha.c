@@ -5,7 +5,8 @@
  *
  * @c: int value to check for alphabetic character
  *
- * Return: return 1 if c is a letter, lowercase or uppercase otherwise Always 0 (Success)
+ * Return: return 1 if c is a letter, lowercase or uppercase
+ *	otherwise Always 0 (Success)
 */
 
 int _isalpha(int c)
