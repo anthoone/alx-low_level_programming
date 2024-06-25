@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * add - dds two integers
+ * add - add two integers
  *
- * @a: first integer
- * @b : seconde integer
+ * @a: first input
+ * @b: second input
  *
- * Description: create a function that adds two integers and returns the result
- *
- * Return : the result of a + b
+ * Return: sum of a & b
 */
 
 int add(int a, int b)
