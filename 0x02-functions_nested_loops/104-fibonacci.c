@@ -4,6 +4,8 @@
 /**
  * numLength - returns the length of string
  *
+ * @num: inpput number
+ *
  * Discription: Fibonacci Documentation
  *
  * Return: number of digits
@@ -24,6 +26,14 @@ int numLength(int num)
 
 	return (length);
 }
+
+/**
+ * main - Entry
+ *
+ * Description: prints the first 98 Fibonacci numbers, starting with 1 and 2
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
