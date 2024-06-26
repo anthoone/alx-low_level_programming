@@ -9,8 +9,6 @@
  * Return: Always 0 (Success)
 */
 
-int _putchar(char);
-
 int main(void)
 {
 	int i;
