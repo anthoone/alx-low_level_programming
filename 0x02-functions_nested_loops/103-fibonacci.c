@@ -11,7 +11,6 @@
 
 int main(void)
 {
-	int i;
 	unsigned long first = 1, second = 2, sum = 2, next;
 
 	while (1)
