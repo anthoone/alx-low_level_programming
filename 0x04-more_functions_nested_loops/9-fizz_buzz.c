@@ -11,20 +11,24 @@
 
 int main(void)
 {
-	int c;
+	int num;
 
-	for (c = 1; c <= 100; c++)
+	for (num = 1; num <= 100; num++)
 	{
-		if ((c % 3 == 0) && (c % 5 == 0))
-			printf("FizzBuzz ");
-		else if (c % 3 == 0)
-			printf("Fizz ");
-		else if (c % 5 == 0)
-			printf("Buzz ");
+		if (num % 3 == 0 && !(num % 5 == 0))
+			printf("Fizz");
+		else if (num % 5 == 0 && !(num % 3 == 0))
+			printf("Buzz");
+		else if (num % 3 == 0 && num % 5 == 0)
+			printf("FizzBuzz");
 		else
-			printf("%d ", c);
+			printf("%d", num);
+
+		if (num != 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 
 	return (0);
 }
