@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -11,7 +10,7 @@
 
 int main(void)
 {
-	unsigned long long count, largest_prime, num = 612852475143;
+	unsigned long int count, largest_prime, num = 612852475143;
 
 	while (num % 2 == 0)
 	{
@@ -30,7 +29,7 @@ int main(void)
 	if (num > 2)
 		largest_prime = num;
 
-	printf("%llu\n", largest_prime);
+	printf("%lu\n", largest_prime);
 
 	return (0);
 }
