@@ -19,6 +19,14 @@ int main(void)
 	}
 	for (count = 3; count * count <= num; count += 2)
 	{
+
+		/**
+		 * it checks for divisibility by odd numbers starting from 3 up to the
+		 * square root of the number. This is because any factor larger than the
+		 * square root of a number must have a corresponding factor smaller than
+		 * the square root.
+		*/
+
 		while (num % count == 0)
 		{
 			largest_prime = count;
