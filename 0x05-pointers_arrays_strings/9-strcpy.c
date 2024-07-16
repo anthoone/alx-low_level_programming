@@ -20,7 +20,6 @@ char *_strcpy(char *dest, char *src)
 	{
 		*P2 = *P1;
 	}
-	*P2 = '\0';
 
 	return (dest);
 }
