@@ -66,91 +66,46 @@ int main(void)
     printf("%s", ptr);
     return (0);
 }
+```
+---
 
-1. strncat
+### 1. `strncat`
 
-Prototype: char *_strncat(char *dest, char *src, int n);
+- **Prototype:** `char *_strncat(char *dest, char *src, int n);`
+- The `_strncat` function is similar to the `_strcat` function, except that
+    it will use at most n bytes from `src`; and
+    `src` does not need to be null-terminated if it contains n or more   bytes
+- Return a pointer to the resulting string `dest`
 
-This function is similar to _strcat, but it uses at most n bytes from src. src does not need to be null-terminated if it contains n or more bytes. It returns a pointer to the resulting string dest.
-2. strncpy
+> **Alert:** FYI: The standard library provides a similar function: `strncat`. Run man `strncat` to learn more.
 
-Prototype: char *_strncpy(char *dest, char *src, int n);
+```c
 
-This function copies a string. It works exactly like strncpy.
-3. strcmp
+#include "main.h"
+#include <stdio.h>
 
-Prototype: int _strcmp(char *s1, char *s2);
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[98] = "Hello ";
+    char s2[] = "World!\n";
+    char *ptr;
 
-This function compares two strings. It works exactly like strcmp.
-4. Reverse Array
+    printf("%s\n", s1);
+    printf("%s", s2);
+    ptr = _strncat(s1, s2, 1);
+    printf("%s\n", s1);
+    printf("%s", s2);
+    printf("%s\n", ptr);
+    ptr = _strncat(s1, s2, 1024);
+    printf("%s", s1);
+    printf("%s", s2);
+    printf("%s", ptr);
+    return (0);
+}
 
-Prototype: void reverse_array(int *a, int n);
-
-This function reverses the content of an array of integers. n is the number of elements in the array.
-5. string_toupper
-
-Prototype: char *string_toupper(char *);
-
-This function changes all lowercase letters of a string to uppercase.
-6. cap_string
-
-Prototype: char *cap_string(char *);
-
-This function capitalizes all words of a string. Separators of words include space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }.
-7. leet
-
-Prototype: char *leet(char *);
-
-This function encodes a string into 1337. It replaces the following letters:
-
-    a and A with 4
-    e and E with 3
-    o and O with 0
-    t and T with 7
-    l and L with 1
-
-8. rot13
-
-Prototype: char *rot13(char *);
-
-This function encodes a string using rot13.
-Project Structure
-
-c
-
-.
-├── 0-strcat.c
-├── 1-strncat.c
-├── 2-strncpy.c
-├── 3-strcmp.c
-├── 4-rev_array.c
-├── 5-string_toupper.c
-├── 6-cap_string.c
-├── 7-leet.c
-├── 8-rot13.c
-├── main.h
-└── README.md
-
-Usage
-
-To compile and run the code:
-
-bash
-
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 <file>.c -o <output>
-./<output>
-
-Replace <file> with the desired source file and <output> with the desired output name.
-Contributing
-
-    Fork the repository.
-    Create your feature branch: git checkout -b my-new-feature.
-    Commit your changes: git commit -am 'Add some feature'.
-    Push to the branch: git push origin my-new-feature.
-    Submit a pull request.
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-For any inquiries or questions, feel free to reach out!
+---
